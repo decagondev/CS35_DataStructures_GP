@@ -31,7 +31,7 @@ class Node:
             # increment end
             end = end.next
             # in the end is not none
-            if end:
+            if end and end.next:
                 # increment end
                 end = end.next
                 # increment middle

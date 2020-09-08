@@ -24,7 +24,14 @@ def smallest_missing(arr, left, right):
         # do a recursive call to the left hand side of the array
         return smallest_missing(arr, left, mid_point - 1)
 
-
+def smallest(arr):
+    for ind, num in enumerate(arr):
+        if num != ind:
+            return ind
+    return (arr[-1] + 1)
+print(smallest([0, 1, 2, 6, 9, 11, 15]))
+print(smallest([1, 2, 3, 4, 6, 9, 11, 15]))
+print(smallest([0, 1, 2, 3, 4, 5, 6]))
 
 
 if __name__ == '__main__':

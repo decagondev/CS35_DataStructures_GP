@@ -43,7 +43,6 @@ This is what you should get out of this module.
 - Interview Prep: solve linked list problem
 - 5 min break
 - Queue and Stack Solution
-- More problem practice
 - 5 min break
-- More problems if time allows
+- More problem practice
 - wrap up

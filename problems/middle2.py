@@ -5,7 +5,7 @@
 - start a loop putting both pointer at the initial node
 - while `end` pointer is not `None`
 - increment the `end` pointer to the next node
-- if the `end` pointer is not none
+- if the `end` pointer is not none and the `end.next` is not None
 - increment the `end` pointer and increment the `middle` pointer to their next node respectively
 - When the while loop ends print out the value of the node that the `middle` pointer is pointing to
 

@@ -131,9 +131,9 @@ class BTNode:
 
     def insert(self, value):
         # problematic solution?
-        if self.value >= value:
+        if value >= self.value:
             self.__add_right__(value)
-        elif self.value < value:
+        elif value < self.value:
             self.__add_left__(value)
 
 

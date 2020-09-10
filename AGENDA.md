@@ -55,3 +55,11 @@ This is what you should get out of this module.
 - 5 min break
 - Building Pseudo-code from research
 - wrap up
+
+## Day 4
+- BST Solution (live code)
+- 5 min break
+- Research Exercise - Depth First Traversal & Breadth First Traversal
+- 5 min break
+- Building Pseudo-code from research
+- Wrap up

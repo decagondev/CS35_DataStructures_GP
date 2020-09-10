@@ -28,7 +28,7 @@ class BSTNode:
                 # insert the node here
             # otherwise
                 # call insert on the root's right node
-                
+
 
         # other / base case
         pass
@@ -36,6 +36,23 @@ class BSTNode:
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
+        # base case?
+        # check the root node value against target
+        # if the root node's value and the target are the same
+            # return True
+        
+        # left case
+        # check if the target is less than the root's value
+            # check if there is no child to the left
+                # return False
+            # otherwise
+                # call contains on the left child
+        # right case
+        # otherwise
+            # check if there is no child to the right
+                # return False
+            # otherwise
+                # call contains on the right child
         pass
 
     # Return the maximum value found in the tree

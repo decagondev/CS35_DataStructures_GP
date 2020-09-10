@@ -129,11 +129,37 @@ class BSTNode:
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
+    """
+     queue
+     grab starting node and put it in a queue
+
+     if there are items in the queue
+     dequeue what the current node is
+     mark it as visited
+     print the value
+     check left
+     enqueue the left
+     check right
+     enqueue the right
+    """
     def bft_print(self):
         pass
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
+        """
+     stack
+     grab starting node and put it in a stack
+
+     if there are items in the stack
+     pop what the current node is
+     mark it as visited
+     print the value
+     check left
+     push the left
+     check right
+     push the right
+    """
     def dft_print(self):
         pass
 

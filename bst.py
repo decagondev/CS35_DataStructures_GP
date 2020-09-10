@@ -125,6 +125,8 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self):
+        
+
         pass
 
     # Print the value of every node, starting with the given node,
@@ -143,6 +145,19 @@ class BSTNode:
      enqueue the right
     """
     def bft_print(self):
+        # instantiate a queue
+
+        # enqueue our starting node (self)
+
+        # while the queue is not empty
+            # dequeue the current node
+            # print the nodes value
+
+            # check if left child exists
+                # enqueue left child
+
+            # check if right child exists
+                # enqueue right child
         pass
 
     # Print the value of every node, starting with the given node,
@@ -161,6 +176,19 @@ class BSTNode:
      push the right
     """
     def dft_print(self):
+        # instantiate a stack
+
+        # push our starting node (self)
+
+        # while the stack is not empty
+            # pop the current node
+            # print the nodes value
+
+            # check if left child exists
+                # push left child
+
+            # check if right child exists
+                # push right child
         pass
 
     # Stretch Goals -------------------------

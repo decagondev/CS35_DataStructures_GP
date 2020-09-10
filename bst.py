@@ -18,20 +18,27 @@ class BSTNode:
     def insert(self, value):
         # left case?
         # check if the value is less than the root value?
+        if value < self.value:
             # move to the left and check if it is none?
+            if not self.left:
                 # insert node here
+                self.left = BSTNode(value)
             # otherwise
+            else:
                 # call insert on the root's left node
+                self.left.insert(value)
         # right case?
         # otherwise
+        else:
             # move to the right and check if it is none?
+            if not self.right:
                 # insert the node here
+                self.right = BSTNode(value)
             # otherwise
+            else:
                 # call insert on the root's right node
+                self.right.insert(value)
 
-
-        # other / base case
-        pass
 
     # Return True if the tree contains the value
     # False if it does not
@@ -39,29 +46,79 @@ class BSTNode:
         # base case?
         # check the root node value against target
         # if the root node's value and the target are the same
+        if self.value == target:
             # return True
+            return True
         
         # left case
         # check if the target is less than the root's value
+        if target < self.value:
             # check if there is no child to the left
+            if not self.left:
                 # return False
+                return False
             # otherwise
-                # call contains on the left child
+            else:
+                # return call contains on the left child
+                return self.left.contains(target)
         # right case
         # otherwise
+        else:
             # check if there is no child to the right
+            if not self.right:
                 # return False
+                return False
             # otherwise
-                # call contains on the right child
-        pass
+            else:
+                # return call contains on the right child
+                return self.right.contains(target)
+
 
     # Return the maximum value found in the tree
     def get_max(self):
-        pass
+        # base case
+        # if the tree is empty return none
+        if not self:
+            return None
+
+        # while there is a right child
+        while self.right:
+            # move to the right
+            self = self.right
+        
+        # once there are no more children to traverse we can return the value
+        return self.value
+
+    # return the minimum value found in a tree
+    def get_min(self):
+        # base case
+        # if the tree is empty return none
+        if not self:
+            return None
+
+        # while there is a left child
+        while self.left:
+            # move to the left
+            self = self.left
+        
+        # once there are no more children to traverse we can return the value
+        return self.value
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
-        pass
+        # call foreach on the root node
+        fn(self.value)
+
+        # if left exists
+        if self.left:
+            # call for each on the left child
+            self.left.for_each(fn)
+
+        # if right exists
+        if self.right:
+            # call for each on the right child
+            self.right.for_each(fn)
+
 
     # Part 2 -----------------------
 
@@ -111,6 +168,6 @@ print("elegant methods")
 print("pre order")
 bst.pre_order_dft()
 print("in order")
-bst.in_order_dft()
+# bst.in_order_dft()
 print("post order")
 bst.post_order_dft()  
